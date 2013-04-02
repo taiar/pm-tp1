@@ -8,10 +8,10 @@ int main(int argc, char const *argv[]) {
   Celula *c;
   c = p->getCelula(4, 7);
 
-  c->set("amor");
+  c->set("teste");
   c->show();
 
-  delete(c);
   delete(p);
+  // delete(c);
   return 0;
 }
