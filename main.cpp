@@ -10,6 +10,9 @@ int main(int argc, char const *argv[]) {
 
   c->set("teste");
   c->show();
+  c = p->getCelula(0, 0);
+
+  c->show();
 
   delete(p);
   // delete(c);

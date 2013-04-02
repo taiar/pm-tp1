@@ -22,9 +22,8 @@ Celula* Planilha::getCelula(int x, int y) {
 
 Planilha::~Planilha() {
   for (int i = 0; i < this->rows; ++i) {
-    for (int j = 0; j < this->cols; ++j) {
+    for (int j = 0; j < this->cols; ++j)
       delete(this->celulas[i][j]);
-    }
     this->celulas[i].clear();
   }
   this->celulas.clear();
