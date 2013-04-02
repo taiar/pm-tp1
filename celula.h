@@ -5,7 +5,11 @@
 
 class Celula {
 private:
-  std::string valor;
+  /**
+   * Valor da célula como o usuário escreveu
+   */
+  std::string valor_expressao;
+
 public:
   Celula();
   void set(std::string);

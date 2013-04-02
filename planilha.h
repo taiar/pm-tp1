@@ -6,9 +6,21 @@
 
 class Planilha {
 private:
+  /**
+   * Guarda os valores das células da planilha
+   */
   std::vector< std::vector< Celula* > > celulas;
-  unsigned int rows;
-  unsigned int cols;
+
+  /**
+   * Número de linhas da planilha
+   */
+  unsigned int numero_linhas;
+
+  /**
+   * Número de colunas da planilha
+   */
+  unsigned int numero_colunas;
+
 public:
   Planilha(unsigned int, unsigned int);
   Celula* getCelula(int, int);

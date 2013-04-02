@@ -3,19 +3,19 @@
 #include "celula.h"
 
 Celula::Celula() {
-  this->valor = "";
+  this->valor_expressao = "";
 }
 
 void Celula::set(std::string s) {
-  this->valor = s;
+  this->valor_expressao = s;
 }
 
 std::string Celula::get() {
-  return this->valor;
+  return this->valor_expressao;
 }
 
 void Celula::show() {
-  std::cout << this->valor << std::endl;
+  std::cout << this->valor_expressao << std::endl;
 }
 
 Celula::~Celula() {}
