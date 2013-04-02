@@ -5,13 +5,13 @@
 int main(int argc, char const *argv[]) {
 
   Planilha *p = new Planilha(40, 20);
-  Celula *c = new Celula();
+  Celula *c;
   c = p->getCelula(4, 7);
 
   c->set("amor");
   c->show();
 
-  delete(p);
   delete(c);
+  delete(p);
   return 0;
 }

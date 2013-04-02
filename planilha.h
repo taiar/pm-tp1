@@ -1,3 +1,4 @@
+#include <vector>
 #include "celula.h"
 
 #ifndef PLANILHA
@@ -5,7 +6,7 @@
 
 class Planilha {
 private:
-  Celula **celulas;
+  std::vector< std::vector< Celula* > > celulas;
   unsigned int rows;
   unsigned int cols;
 public:
