@@ -1,19 +1,21 @@
 #include <iostream>
-#include <QString>
+#include <string>
 #include "celula.h"
 
-Celula::Celula() {}
+Celula::Celula() {
+  this->valor = "";
+}
 
-void Celula::set(QString s) {
+void Celula::set(std::string s) {
   this->valor = s;
 }
 
-QString Celula::get() {
+std::string Celula::get() {
   return this->valor;
 }
 
-void show(Celula *c) {
-  std::cout << c->valor << std::endl;
+void Celula::show() {
+  std::cout << this->valor << std::endl;
 }
 
 Celula::~Celula() {}

@@ -6,9 +6,11 @@
 class Planilha {
 private:
   Celula **celulas;
+  unsigned int rows;
+  unsigned int cols;
 public:
-  Planilha(int, int);
-  Celula *getCelula(int, int);
+  Planilha(unsigned int, unsigned int);
+  Celula* getCelula(int, int);
   ~Planilha();
 };
 

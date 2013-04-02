@@ -1,16 +1,16 @@
-#include <QString>
+#include <string>
 
 #ifndef CELULA_H
 #define CELULA_H
 
 class Celula {
 private:
-  QString valor;
+  std::string valor;
 public:
   Celula();
-  void set(QString);
-  QString get();
-  void show(Celula*);
+  void set(std::string);
+  std::string get();
+  void show();
   ~Celula();
 };
 
