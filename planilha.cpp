@@ -12,10 +12,10 @@ Planilha::Planilha(unsigned int linhas, unsigned int colunas) {
 
   // Alocando a matriz de células
   this->celulas.clear();
-  for (unsigned int i = 0; i < this->rows; ++i) {
-    this->celulas.push_back(std::vector<Celula*>( this->rows ));
+  for (unsigned int i = 0; i < this->numero_linhas; ++i) {
+    this->celulas.push_back(std::vector<Celula*>( this->numero_linhas ));
     this->celulas[i].clear();
-    for (unsigned int j = 0; j < this->cols; ++j)
+    for (unsigned int j = 0; j < this->numero_colunas; ++j)
       this->celulas[i].push_back(new Celula());
   }
 }
@@ -32,8 +32,8 @@ Celula* Planilha::getCelula(int x, int y) {
  * Desaloca a matriz de células
  */
 Planilha::~Planilha() {
-  for (int i = 0; i < this->rows; ++i) {
-    for (int j = 0; j < this->cols; ++j)
+  for (int i = 0; i < this->numero_linhas; ++i) {
+    for (int j = 0; j < this->numero_colunas; ++j)
       delete(this->celulas[i][j]);
     this->celulas[i].clear();
   }
