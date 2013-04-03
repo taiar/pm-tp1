@@ -4,6 +4,8 @@
 
 Celula::Celula() {
   this->valor_expressao = "";
+  this->valor_exibido   = "";
+  this->valor_tipo      = celulaTipo::VAZIO;
 }
 
 void Celula::set(std::string s) {
