@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <ctype.h>
 #include "celula.h"
 #include "parser.h"
 
@@ -11,6 +13,21 @@ void Parser::setFormula(std::string s) {
   formula_raw = s;
 }
 
+/**
+ * VAZIO, NUMERO, STRING, FORMULA, ERRO;
+ */
 unsigned short int Parser::parse() {
-  return celulaTipo::FORMULA;
+  if(this->formula_raw.length() < 1) {
+    this->formula_result = "";
+    return celulaTipo::VAZIO;
+  } else if (this->checkNumber()) {
+    return celulaTipo::NUMERO;
+  }
+}
+
+bool Parser::checkNumber() {
+  for (int i = 0; i < this->formula_raw.length(); ++i)
+    if(!isdigit(this->formula_raw.at(i)))
+      return false;
+  return true;
 }

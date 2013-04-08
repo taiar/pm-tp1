@@ -15,7 +15,7 @@ int main(int argc, char const *argv[]) {
 
   c->show();
 
-  Parser* pa = new Parser();
+  Parser* pa = new Parser("6a");
 
   std::cout << pa->parse() << std::endl;
 
