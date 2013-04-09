@@ -4,8 +4,7 @@
 #include <string>
 #include "celula.h"
 
-class Parser
-{
+class Parser {
 private:
   std::string formula_raw;
   std::string formula_result;

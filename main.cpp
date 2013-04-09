@@ -9,11 +9,11 @@ int main(int argc, char const *argv[]) {
   Celula *c;
   c = p->getCelula(4, 7);
 
-  c->set("teste");
-  c->show();
+  c->set_valor_expressao("teste");
+  c->show_valor_expressao();
   c = p->getCelula(0, 0);
 
-  c->show();
+  c->show_valor_expressao();
 
   Parser* pa = new Parser("6a");
 

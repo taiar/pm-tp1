@@ -22,16 +22,26 @@ private:
    */
   std::string valor_exibido;
 
-   /**
-    * Tipo de dado representado na célula no estado atual
-    */
-   int valor_tipo;
+  /**
+   * Tipo de dado representado na célula no estado atual
+   */
+  int valor_tipo;
 
 public:
   Celula();
-  void set(std::string);
-  std::string get();
-  void show();
+
+  void set_valor_expressao(std::string);
+  std::string get_valor_expressao();
+  void show_valor_expressao();
+
+  void set_valor_exibido(std::string);
+  std::string get_valor_exibido();
+  void show_valor_exibido();
+
+  void set_valor_tipo(int);
+  int get_valor_tipo();
+  void show_valor_tipo();
+
   ~Celula();
 };
 
