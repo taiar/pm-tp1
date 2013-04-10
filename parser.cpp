@@ -23,10 +23,11 @@ unsigned short int Parser::parse() {
   } else if (this->checkNumber()) {
     return celulaTipo::NUMERO;
   }
+  return celulaTipo::ERRO;
 }
 
 bool Parser::checkNumber() {
-  for (int i = 0; i < this->formula_raw.length(); ++i)
+  for (unsigned int i = 0; i < this->formula_raw.length(); ++i)
     if(!isdigit(this->formula_raw.at(i)))
       return false;
   return true;

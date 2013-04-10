@@ -32,8 +32,8 @@ Celula* Planilha::getCelula(int x, int y) {
  * Desaloca a matriz de células
  */
 Planilha::~Planilha() {
-  for (int i = 0; i < this->numero_linhas; ++i) {
-    for (int j = 0; j < this->numero_colunas; ++j)
+  for (unsigned int i = 0; i < this->numero_linhas; ++i) {
+    for (unsigned int j = 0; j < this->numero_colunas; ++j)
       delete(this->celulas[i][j]);
     this->celulas[i].clear();
   }
