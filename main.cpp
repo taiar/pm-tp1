@@ -19,6 +19,9 @@ int main(int argc, char const *argv[]) {
 
   std::cout << pa->parse() << std::endl;
 
+  p->setArquivo("./teste.txt");
+  p->Salvar();
+
   delete(p);
   // delete(c);
   return 0;
